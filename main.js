@@ -47,10 +47,10 @@ let count = document.getElementById("number-cases");
 count.textContent = data.length;
 
 my_form.addEventListener("submit", function (e) {
-
   const myInputText = my_input.value;
 
   if (myInputText === "") {
+    e.preventDefault();
     show.style.display = "block";
   } else {
     show.style.display = "none";
