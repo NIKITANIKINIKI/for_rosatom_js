@@ -1,0 +1,203 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+
+}
+
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 30px;
+    
+}
+
+.description{
+    padding: 4em;
+    background-color: rgba(10, 11, 37, 0.892);
+    border-radius: 20px;
+    box-shadow: 0 1em 2 em rgba(211, 95, 13, 0.4);
+    margin-bottom:10px;
+}
+
+.my-app{
+    width: 80%;
+    margin: 0 auto;
+    padding: 1em;
+    background-color: rgba(211, 211, 222, 0.892); 
+    border-radius: 20px;
+    box-shadow: 0 1em 2 em rgba(211, 95, 13, 0.4);
+    transition: background-color 0.5s ease ;
+    margin-top: 10px;
+    z-index: 0;
+}
+
+.my-app-color-e{
+    background-color:  rgba(170, 192, 213, 0.892);
+    z-index: 1;
+}
+
+.my-app-color-o{
+    background-color:  rgba(102, 102, 140, 0.892);
+    z-index: 1;
+}
+
+
+
+.my-app:hover{
+    background-color: rgba(164, 164, 183, 0.892); 
+}
+.my-button{
+    position: relative;
+    display: grid;
+    gap: 0.7em;
+    grid-template-columns: 8fr 4fr;
+}
+
+
+.my-button input{
+    width: 100%;
+    color: rgb(16, 19, 1);
+    background-color: transparent;
+    border:none;
+    padding: 0.9em 0.4em;
+    border-radius: 10px;
+}
+
+.my-button button{
+    border-radius: 10px;
+    background-color: rgb(19, 91, 200);
+    color:rgb(225, 247, 246);
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+.my-button button:hover{
+    background-color: blue;
+}
+.my-10{
+    margin-top: 10px;
+}
+
+#error{
+    color:red;
+    text-align: center;
+}
+
+
+.my-tasks {
+    display: flex; 
+    align-items: center;
+    
+}
+
+.block-messages{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.button-task{
+    display: flex;
+    margin-left: auto;
+    justify-content: center;
+}
+
+
+@media screen and (min-width: 768px) {
+    .buttons {
+      flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .buttons {
+      flex-direction: column;
+       
+    }
+ }
+
+.buttons button{
+    padding: 8px 12px;
+    border-color: rgb(19, 91, 200);
+    border-radius: 5px;
+    background-color: rgb(19, 91, 200);
+    white-space: nowrap;
+    margin-top: 5px;
+    color:white; 
+    transition: background-color 0.5s ease;  
+}
+
+.buttons button:hover{
+    background-color: blue;
+}
+
+
+
+p{  
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:10px;
+}
+
+.show-tasks {
+    background-color: #3498db; 
+    color: white; 
+    padding: 10px 20px;  
+    border-radius: 6px; 
+    cursor: pointer; 
+    transition: background-color 0.5s ease;
+    text-align: center;
+    border: none;
+}
+
+.show-tasks:hover{
+    background-color: #2980b9;
+}
+
+#ok{
+    color: rgb(31, 182, 11);
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    transition: background-color 0.5s ease;
+}
+
+#ok:hover{
+    background-color: rgb(10, 187, 10);
+    color: white;
+}
+
+#del{
+    color: rgb(234, 15, 15);
+    background-color:transparent;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    transition: background-color 0.5s ease;
+}
+#del:hover{
+    color:white;
+    background-color: red;
+}
+
+.show{
+    display: none;
+}
+
+.number{
+    font-size: 1.5em;
+    color:red;
+}
+
+.number-ok{
+    font-size: 1.5em;
+    color:rgb(13, 204, 13);
+}

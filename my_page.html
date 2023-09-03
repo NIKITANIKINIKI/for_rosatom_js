@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MY TO DO LIST</title>
+    <link rel="stylesheet" href="my_styles.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="description">
+        <div class="my-app">
+          <p>
+            Hello, don't waste your time! Let's Do It! You have
+            <span id="number-cases">0</span> task
+          </p>
+          <div class="buttons">
+            <button id="remove-f">Remove first element</button>
+            <button id="remove-l">Remove last element</button>
+            <button id="select-e">Select even elements</button>
+            <button id="select-o">Select odd elements</button>
+          </div>
+        </div>
+        <div class="my-app">
+          <form id="my-form">
+            <div class="my-button">
+              <input
+                id="my-input"
+                type="text"
+                placeholder="Write your tasks!"
+              />
+              <button>Add</button>
+            </div>
+          </form>
+        </div>
+          <div class="my-app my-10 show">
+            <div>
+              <p id="error">You entered an empty string!</p>
+            </div>
+          </div>
+        <div class="center">
+          <button class="show-tasks">
+            <span id="show-text-button">To show all tasks</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
