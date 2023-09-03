@@ -26,7 +26,7 @@ data.sort((a,b)=> {
 })
 
 
-data.forEach(function (datas) {
+function addHTML(datas){
   const NewOb = `
     <div id='${datas.name}' class='${datas.style}'>
         <div class="block-messages">
@@ -41,6 +41,10 @@ data.forEach(function (datas) {
     </div>`;
 
   my_tasks.insertAdjacentHTML("beforeend", NewOb);
+}
+
+data.forEach(function (datas) {
+  addHTML(datas);
 });
 
 let count = document.getElementById("number-cases");
@@ -50,36 +54,18 @@ my_form.addEventListener("submit", function (e) {
   const myInputText = my_input.value;
 
   if (myInputText === "") {
-    e.preventDefault();
+    e.preventDefault()
     show.style.display = "block";
   } else {
     show.style.display = "none";
-
     const newObj = {
       name: generateNewName(),
       content: myInputText,
       check: "number",
       style: 'my-app',
     };
-
     data.push(newObj);
-
-
-
-    const NewOb = `
-        <div id='${newObj.name}' class='${newObj.style}'>
-            <div class="block-messages">
-                <p><span class=${newObj.check}>${
-      data.indexOf(newObj) + 1
-    }</span> ${newObj.content}</p>
-              <div class="button-task">
-                <button id="ok">✓</button>
-                <button id="del">✕</button>
-              </div>
-            </div>
-        </div>`;
-
-    my_tasks.insertAdjacentHTML("beforeend", NewOb);
+    addHTML(newObj);
     saveData();
   }
 });
