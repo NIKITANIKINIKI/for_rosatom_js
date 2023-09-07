@@ -64,6 +64,9 @@ my_form.addEventListener("submit", function (e) {
       check: "number",
       style: 'my-app',
     };
+    for(let i=0;i<data.length;i++){
+      data[i].style='my-app';
+    }
     data.push(newObj);
     addHTML(newObj);
     saveData();
@@ -71,7 +74,6 @@ my_form.addEventListener("submit", function (e) {
 });
 
 my_tasks.addEventListener("click", function (e) {
-  // console.log(e.target);
   if (e.target.getAttribute("id") === "ok") {
     console.log("UPDATE!");
     const myAppTag = e.target.closest(".my-app");
@@ -91,9 +93,10 @@ my_tasks.addEventListener("click", function (e) {
     const myAppTag = e.target.closest(".my-app");
 
     data = data.filter((data) => data.name != myAppTag.id);
-
-    console.log(data);
     myAppTag.remove();
+    for(let i=0;i<data.length;i++){
+      data[i].style='my-app';
+    }
     location.reload();
   }
   saveData();
