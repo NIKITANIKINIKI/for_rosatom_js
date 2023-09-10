@@ -7,6 +7,7 @@ const remove_l = document.getElementById("remove-l");
 const select_e = document.getElementById("select-e");
 const select_o = document.getElementById("select-o");
 const show_tasks = document.querySelector(".show-tasks");
+const center_button=document.querySelector('.center-button');
 
 let data = [];
 
@@ -61,6 +62,12 @@ show_tasks.addEventListener("click", function () {
   } 
   else location.reload();
 });
+
+
+if(data.length<=10){
+  center_button.style.display='none';
+}
+
 
 my_form.addEventListener("submit", function (e) {
   const myInputText = my_input.value;

@@ -139,7 +139,7 @@ p{
     word-wrap: break-word;
 }
 
-.center{
+.center-button{
     display: flex;
     justify-content: center;
     align-items: center;
